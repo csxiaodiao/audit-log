@@ -29,6 +29,12 @@ module AuditLog
       user.send(AuditLog.config.user_name_method)
     end
 
+    def user_mail
+      return "none" if user.blank?
+
+      user.send(AuditLog.config.user_mail_method)
+    end
+
     def action_name
       I18n.t("audit_log.action.#{action}", default: action)
     end

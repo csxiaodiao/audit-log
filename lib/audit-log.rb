@@ -16,6 +16,7 @@ module AuditLog
       @config.user_class = "User"
       @config.current_user_method = "current_user"
       @config.user_name_method = "name"
+      @config.user_mail_method = "email"
       @config.table_name = "audit_logs"
       @config
     end
